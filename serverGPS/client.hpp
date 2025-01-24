@@ -15,14 +15,15 @@ public:
     string name;
     string password;
     vector<Tracker> trakcers();
+    int dataBuffer[25];
     char authBuffer[32];
-    bool isLeasen;
+    bool isLWing; //this var responder for 2 state. For isLeasining and For is Writting
     ip::tcp::socket* rozetka;
     static int unAuthsClients;
     
     
     Client(io_context& io, int id = 0, string nameStr = "unAuth"):
-    rozetka(new ip::tcp::socket(io)), password("1234"), isLeasen(false){
+    rozetka(new ip::tcp::socket(io)), password("1234"), isLWing(false){
         ID = id;
         name = nameStr;
     }

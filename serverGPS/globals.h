@@ -12,6 +12,7 @@ class Server;
 //
 extern Server serv;
 extern unordered_map<string,Client*> storageClients;
+extern bool infinity;
 //
 
 //#endif

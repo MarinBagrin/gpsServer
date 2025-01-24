@@ -39471,13 +39471,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = /Users/developmarin/Desktop/libraries/boost;
+				HEADER_SEARCH_PATHS = (
+					"/Users/developmarin/Downloads/mysql-connector-c++-9.2.0-macos15-arm64/include/jdbc",
+					/Users/developmarin/Desktop/libraries/boost,
+				);
+				LIBRARY_SEARCH_PATHS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
+				ds = "";
 			};
 			name = Debug;
 		};
@@ -39527,12 +39534,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = /Users/developmarin/Desktop/libraries/boost;
+				HEADER_SEARCH_PATHS = (
+					"/Users/developmarin/Downloads/mysql-connector-c++-9.2.0-macos15-arm64/include/jdbc",
+					/Users/developmarin/Desktop/libraries/boost,
+				);
+				LIBRARY_SEARCH_PATHS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
+				ds = "";
 			};
 			name = Release;
 		};
