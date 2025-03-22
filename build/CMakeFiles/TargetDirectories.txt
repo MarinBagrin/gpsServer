@@ -1,0 +1,4 @@
+/Users/developmarin/Desktop/marin/projects/serverGPS/build/CMakeFiles/server.dir
+/Users/developmarin/Desktop/marin/projects/serverGPS/build/CMakeFiles/server_autogen.dir
+/Users/developmarin/Desktop/marin/projects/serverGPS/build/CMakeFiles/ALL_BUILD.dir
+/Users/developmarin/Desktop/marin/projects/serverGPS/build/CMakeFiles/ZERO_CHECK.dir
