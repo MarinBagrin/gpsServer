@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3A5A29FECC226DD4FAB84875 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 88701079488E4C578929364D /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				08F89ACFC4A0BA04A2062675 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				8FE458C8E69543C4BE6DC647 /* PBXTargetDependency */,
+				8AB3BB94F16A42A4A7D6D7E2 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		5B4903F2056148E2C1A4B602 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E2A3E6A3BB054B4A96B0544F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				F1A3A179B1956CB1A547C907 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		08DBECF8A3EF4E079C5FF1A7 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/client.hpp */ = {isa = PBXBuildFile; fileRef = BB5C457A74894FF8AF4E2D36 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/client.hpp */; };
+		2AE32DE3FD454B4FADBC9601 /* /Users/developmarin/Desktop/develop/projects/serverGPS/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A3D8227B9FEF4274B3A55862 /* /Users/developmarin/Desktop/develop/projects/serverGPS/CMakeLists.txt */; };
+		4DB9136B1AEA44AB89E6F5F6 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/client.cpp */ = {isa = PBXBuildFile; fileRef = E158F58BD663477ABB3BECDB /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/client.cpp */; };
+		6ED8FECE61734DB98B4F3A5A /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/globals.cpp */ = {isa = PBXBuildFile; fileRef = E3AE88F654234EDD94DB51C8 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/globals.cpp */; };
+		769FA23B63CA4FE7947B81E7 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/tracker.pb.hpp */ = {isa = PBXBuildFile; fileRef = 6DFF40E0F5784DE98E0886A7 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/tracker.pb.hpp */; };
+		7F8EBDDF859F4ED68C48FBEA /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/globals.hpp */ = {isa = PBXBuildFile; fileRef = ECDDC5DF213F453A986739E5 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/globals.hpp */; };
+		88C7A580E5A54AAB8BCCEFAD /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/server.cpp */ = {isa = PBXBuildFile; fileRef = C8F0E6D2A52E41268FDD37C1 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/server.cpp */; };
+		9324CA19705C4DFE83418992 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/mysql.hpp */ = {isa = PBXBuildFile; fileRef = 5237D74737434F51A1CE8A5E /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/mysql.hpp */; };
+		BBFCBDD95A2246D2B6643D97 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/mysql.cpp */ = {isa = PBXBuildFile; fileRef = 65B94966A82D448A81D63AAC /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/mysql.cpp */; };
+		D5401AD37DA74BD5B45253BA /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/server.hpp */ = {isa = PBXBuildFile; fileRef = C408479EE14C4740B8AF58D3 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/server.hpp */; };
+		D5F25EADEC7D4910998D570C /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/tracker.pb.cpp */ = {isa = PBXBuildFile; fileRef = 450500784C3E4CA1BE68F9B6 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/tracker.pb.cpp */; };
+		D74FA3EACC4348B9816C7352 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.cpp */ = {isa = PBXBuildFile; fileRef = D14389DDF4F6411489828356 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.cpp */; };
+		F64AA479FEA844F8842B4E58 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.hpp */ = {isa = PBXBuildFile; fileRef = 0C0AD2654CE243AABEC02FB4 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		7CD1057BF91345F1A407C44B /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		CC6EBE78E7B649D0AA1AB687 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		ED16AEFCB911473D834CCD65 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		EE9CCED427214C129E2C1D2E /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		17719A71E11D4029B177BAE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6005CBBDE52645AE9E7C249A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8881948FB352084CBEC0D07C;
+			remoteInfo = server;
+		};
+		4A41D1C6CF4D452DA325F8AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6005CBBDE52645AE9E7C249A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B4903F2056148E2C1A4B602;
+			remoteInfo = ZERO_CHECK;
+		};
+		B4243D5B4A5A40E9B38878A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6005CBBDE52645AE9E7C249A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B4903F2056148E2C1A4B602;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C0AD2654CE243AABEC02FB4 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = main.hpp; path = main.hpp; sourceTree = SOURCE_ROOT; };
+		450500784C3E4CA1BE68F9B6 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/tracker.pb.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tracker.pb.cpp; path = "Source Servers/tracker.pb.cpp"; sourceTree = SOURCE_ROOT; };
+		5237D74737434F51A1CE8A5E /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/mysql.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = mysql.hpp; path = "Header Servers/mysql.hpp"; sourceTree = SOURCE_ROOT; };
+		5E01D92282C2408A95F016C9 /* server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = server; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B94966A82D448A81D63AAC /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/mysql.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mysql.cpp; path = "Source Servers/mysql.cpp"; sourceTree = SOURCE_ROOT; };
+		6DFF40E0F5784DE98E0886A7 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/tracker.pb.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = tracker.pb.hpp; path = "Header Servers/tracker.pb.hpp"; sourceTree = SOURCE_ROOT; };
+		9762C57780DD49D3AEA7D206 /* /Users/developmarin/Desktop/develop/projects/serverGPS/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A3D8227B9FEF4274B3A55862 /* /Users/developmarin/Desktop/develop/projects/serverGPS/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		BB5C457A74894FF8AF4E2D36 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/client.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = client.hpp; path = "Header Servers/client.hpp"; sourceTree = SOURCE_ROOT; };
+		C408479EE14C4740B8AF58D3 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/server.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = server.hpp; path = "Header Servers/server.hpp"; sourceTree = SOURCE_ROOT; };
+		C8F0E6D2A52E41268FDD37C1 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/server.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = server.cpp; path = "Source Servers/server.cpp"; sourceTree = SOURCE_ROOT; };
+		D14389DDF4F6411489828356 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		E158F58BD663477ABB3BECDB /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/client.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = client.cpp; path = "Source Servers/client.cpp"; sourceTree = SOURCE_ROOT; };
+		E3AE88F654234EDD94DB51C8 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/globals.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = globals.cpp; path = "Source Servers/globals.cpp"; sourceTree = SOURCE_ROOT; };
+		ECDDC5DF213F453A986739E5 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/globals.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = globals.hpp; path = "Header Servers/globals.hpp"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8196031586C841D8BFAEEFC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A885856783A4C63B7BB7BCE /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB5C457A74894FF8AF4E2D36 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/client.hpp */,
+				ECDDC5DF213F453A986739E5 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/globals.hpp */,
+				5237D74737434F51A1CE8A5E /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/mysql.hpp */,
+				C408479EE14C4740B8AF58D3 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/server.hpp */,
+				6DFF40E0F5784DE98E0886A7 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers/tracker.pb.hpp */,
+				0C0AD2654CE243AABEC02FB4 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		3ECE5D78F6BF49CE95E4F444 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				B8E21A6BBB7B4249BAA6AD43 /* Source Files */,
+				0A885856783A4C63B7BB7BCE /* Header Files */,
+				A3D8227B9FEF4274B3A55862 /* /Users/developmarin/Desktop/develop/projects/serverGPS/CMakeLists.txt */,
+			);
+			name = server;
+			sourceTree = "<group>";
+		};
+		6431BD8DA4174F78B2C01AA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E01D92282C2408A95F016C9 /* server */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6FB4A2727E84EC59DC972BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8E21A6BBB7B4249BAA6AD43 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E158F58BD663477ABB3BECDB /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/client.cpp */,
+				E3AE88F654234EDD94DB51C8 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/globals.cpp */,
+				65B94966A82D448A81D63AAC /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/mysql.cpp */,
+				C8F0E6D2A52E41268FDD37C1 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/server.cpp */,
+				450500784C3E4CA1BE68F9B6 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/tracker.pb.cpp */,
+				D14389DDF4F6411489828356 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CF2DA7FA9B2F4762A55E9E25 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E13161610D0A4401A45BAF9F = {
+			isa = PBXGroup;
+			children = (
+				3ECE5D78F6BF49CE95E4F444 /* server */,
+				E9886804F1EA4D9E95CAF04D /* ALL_BUILD */,
+				6431BD8DA4174F78B2C01AA4 /* Products */,
+				A6FB4A2727E84EC59DC972BE /* Frameworks */,
+				F2CAAB9A5F204A95A740D6A9 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		E9886804F1EA4D9E95CAF04D /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				CF2DA7FA9B2F4762A55E9E25 /* CMake Rules */,
+				9762C57780DD49D3AEA7D206 /* /Users/developmarin/Desktop/develop/projects/serverGPS/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F2CAAB9A5F204A95A740D6A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8881948FB352084CBEC0D07C /* server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A89157F1697947609AA6BB7B /* Build configuration list for PBXNativeTarget "server" */;
+			buildPhases = (
+				DDFA66A7E310419FACF4E483 /* Sources */,
+				8196031586C841D8BFAEEFC5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D271358E64BA4D24A6AF4640 /* PBXTargetDependency */,
+			);
+			name = server;
+			productName = server;
+			productReference = 5E01D92282C2408A95F016C9 /* server */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6005CBBDE52645AE9E7C249A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1620;
+			};
+			buildConfigurationList = 44444621AABB41BC8CBFB9B8 /* Build configuration list for PBXProject "serverGPSn" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				EE9CCED427214C129E2C1D2E /* Debug */,
+				ED16AEFCB911473D834CCD65 /* Release */,
+				7CD1057BF91345F1A407C44B /* MinSizeRel */,
+				CC6EBE78E7B649D0AA1AB687 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = E13161610D0A4401A45BAF9F;
+			projectDirPath = /Users/developmarin/Desktop/develop/projects/serverGPS;
+			projectRoot = "";
+			targets = (
+				3A5A29FECC226DD4FAB84875 /* ALL_BUILD */,
+				5B4903F2056148E2C1A4B602 /* ZERO_CHECK */,
+				8881948FB352084CBEC0D07C /* server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08F89ACFC4A0BA04A2062675 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F1A3A179B1956CB1A547C907 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  make -f /Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  make -f /Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  make -f /Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/developmarin/Desktop/develop/projects/serverGPS/build
+  make -f /Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDFA66A7E310419FACF4E483 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB9136B1AEA44AB89E6F5F6 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/client.cpp */,
+				6ED8FECE61734DB98B4F3A5A /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/globals.cpp */,
+				BBFCBDD95A2246D2B6643D97 /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/mysql.cpp */,
+				88C7A580E5A54AAB8BCCEFAD /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/server.cpp */,
+				D5F25EADEC7D4910998D570C /* /Users/developmarin/Desktop/develop/projects/serverGPS/Source Servers/tracker.pb.cpp */,
+				D74FA3EACC4348B9816C7352 /* /Users/developmarin/Desktop/develop/projects/serverGPS/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AB3BB94F16A42A4A7D6D7E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8881948FB352084CBEC0D07C /* server */;
+			targetProxy = 17719A71E11D4029B177BAE2 /* PBXContainerItemProxy */;
+		};
+		8FE458C8E69543C4BE6DC647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B4903F2056148E2C1A4B602 /* ZERO_CHECK */;
+			targetProxy = B4243D5B4A5A40E9B38878A2 /* PBXContainerItemProxy */;
+		};
+		D271358E64BA4D24A6AF4640 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B4903F2056148E2C1A4B602 /* ZERO_CHECK */;
+			targetProxy = 4A41D1C6CF4D452DA325F8AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		35C2D17CD3464F0582B28ADC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/developmarin/Desktop/develop/projects/serverGPS/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		3FE2F4D6E7DF443FBF9AD9D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/developmarin/Desktop/develop/projects/serverGPS/build/build;
+			};
+			name = Release;
+		};
+		53C2E84EF7624F2E9C3074E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		5A4765D9AEE3461691889B4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		672394528C1047A7BC5A99CF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6AF080B56C3047EEB537514D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7AA4178DE4F647F78C3ECD3E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/developmarin/Desktop/develop/projects/serverGPS/build/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",PROTOBUF_USE_DLLS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers\"",/Users/developmarin/Desktop/libraries/boost,"/Users/developmarin/Desktop/libraries/ConnectorC++/include/jdbc","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/developmarin/Desktop/libraries/ConnectorC++/lib64 /usr/local/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/developmarin/Desktop/libraries/ConnectorC++/lib64/libmysqlcppconn.10.9.2.0.dylib",/usr/local/lib/libprotobuf.29.3.0.dylib,/usr/local/lib/libabsl_log_internal_check_op.2407.0.0.dylib,/usr/local/lib/libabsl_leak_check.2407.0.0.dylib,/usr/local/lib/libabsl_die_if_null.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_conditions.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_message.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_nullguard.2407.0.0.dylib,/usr/local/lib/libabsl_examine_stack.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_format.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_proto.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_log_sink_set.2407.0.0.dylib,/usr/local/lib/libabsl_log_sink.2407.0.0.dylib,/usr/local/lib/libabsl_log_entry.2407.0.0.dylib,/usr/local/lib/libabsl_flags_internal.2407.0.0.dylib,/usr/local/lib/libabsl_flags_marshalling.2407.0.0.dylib,/usr/local/lib/libabsl_flags_reflection.2407.0.0.dylib,/usr/local/lib/libabsl_flags_config.2407.0.0.dylib,/usr/local/lib/libabsl_flags_program_name.2407.0.0.dylib,/usr/local/lib/libabsl_flags_private_handle_accessor.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_initialize.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_globals.2407.0.0.dylib,/usr/local/lib/libabsl_log_globals.2407.0.0.dylib,/usr/local/lib/libabsl_vlog_config_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_fnmatch.2407.0.0.dylib,/usr/local/lib/libabsl_raw_hash_set.2407.0.0.dylib,/usr/local/lib/libabsl_hash.2407.0.0.dylib,/usr/local/lib/libabsl_city.2407.0.0.dylib,/usr/local/lib/libabsl_low_level_hash.2407.0.0.dylib,/usr/local/lib/libabsl_hashtablez_sampler.2407.0.0.dylib,/usr/local/lib/libabsl_random_distributions.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_sequences.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_pool_urbg.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes_impl.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_slow.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_platform.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_seed_material.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_gen_exception.2407.0.0.dylib,/usr/local/lib/libabsl_statusor.2407.0.0.dylib,/usr/local/lib/libabsl_status.2407.0.0.dylib,/usr/local/lib/libabsl_cord.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_info.2407.0.0.dylib,/usr/local/lib/libabsl_cord_internal.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_functions.2407.0.0.dylib,/usr/local/lib/libabsl_exponential_biased.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_handle.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cord_state.2407.0.0.dylib,/usr/local/lib/libabsl_crc32c.2407.0.0.dylib,/usr/local/lib/libabsl_crc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cpu_detect.2407.0.0.dylib,/usr/local/lib/libabsl_bad_optional_access.2407.0.0.dylib,/usr/local/lib/libabsl_strerror.2407.0.0.dylib,/usr/local/lib/libabsl_str_format_internal.2407.0.0.dylib,/usr/local/lib/libabsl_synchronization.2407.0.0.dylib,/usr/local/lib/libabsl_stacktrace.2407.0.0.dylib,/usr/local/lib/libabsl_symbolize.2407.0.0.dylib,/usr/local/lib/libabsl_debugging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_rust.2407.0.0.dylib,/usr/local/lib/libabsl_decode_rust_punycode.2407.0.0.dylib,/usr/local/lib/libabsl_utf8_for_code_point.2407.0.0.dylib,/usr/local/lib/libabsl_graphcycles_internal.2407.0.0.dylib,/usr/local/lib/libabsl_kernel_timeout_internal.2407.0.0.dylib,/usr/local/lib/libabsl_malloc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_time.2407.0.0.dylib,/usr/local/lib/libabsl_civil_time.2407.0.0.dylib,/usr/local/lib/libabsl_time_zone.2407.0.0.dylib,"-Wl,-framework,CoreFoundation",/usr/local/lib/libabsl_bad_variant_access.2407.0.0.dylib,/usr/local/lib/libabsl_strings.2407.0.0.dylib,/usr/local/lib/libabsl_int128.2407.0.0.dylib,/usr/local/lib/libabsl_strings_internal.2407.0.0.dylib,/usr/local/lib/libabsl_string_view.2407.0.0.dylib,/usr/local/lib/libabsl_base.2407.0.0.dylib,/usr/local/lib/libabsl_spinlock_wait.2407.0.0.dylib,/usr/local/lib/libabsl_throw_delegate.2407.0.0.dylib,/usr/local/lib/libabsl_raw_logging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_severity.2407.0.0.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = server;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/developmarin/Desktop/develop/projects/serverGPS/build/build/server.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A46FBE0D31AA45B083565D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		A6F53D45F0694A5A83219444 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/developmarin/Desktop/develop/projects/serverGPS/build/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",PROTOBUF_USE_DLLS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers\"",/Users/developmarin/Desktop/libraries/boost,"/Users/developmarin/Desktop/libraries/ConnectorC++/include/jdbc","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/developmarin/Desktop/libraries/ConnectorC++/lib64 /usr/local/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/developmarin/Desktop/libraries/ConnectorC++/lib64/libmysqlcppconn.10.9.2.0.dylib",/usr/local/lib/libprotobuf.29.3.0.dylib,/usr/local/lib/libabsl_log_internal_check_op.2407.0.0.dylib,/usr/local/lib/libabsl_leak_check.2407.0.0.dylib,/usr/local/lib/libabsl_die_if_null.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_conditions.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_message.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_nullguard.2407.0.0.dylib,/usr/local/lib/libabsl_examine_stack.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_format.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_proto.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_log_sink_set.2407.0.0.dylib,/usr/local/lib/libabsl_log_sink.2407.0.0.dylib,/usr/local/lib/libabsl_log_entry.2407.0.0.dylib,/usr/local/lib/libabsl_flags_internal.2407.0.0.dylib,/usr/local/lib/libabsl_flags_marshalling.2407.0.0.dylib,/usr/local/lib/libabsl_flags_reflection.2407.0.0.dylib,/usr/local/lib/libabsl_flags_config.2407.0.0.dylib,/usr/local/lib/libabsl_flags_program_name.2407.0.0.dylib,/usr/local/lib/libabsl_flags_private_handle_accessor.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_initialize.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_globals.2407.0.0.dylib,/usr/local/lib/libabsl_log_globals.2407.0.0.dylib,/usr/local/lib/libabsl_vlog_config_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_fnmatch.2407.0.0.dylib,/usr/local/lib/libabsl_raw_hash_set.2407.0.0.dylib,/usr/local/lib/libabsl_hash.2407.0.0.dylib,/usr/local/lib/libabsl_city.2407.0.0.dylib,/usr/local/lib/libabsl_low_level_hash.2407.0.0.dylib,/usr/local/lib/libabsl_hashtablez_sampler.2407.0.0.dylib,/usr/local/lib/libabsl_random_distributions.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_sequences.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_pool_urbg.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes_impl.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_slow.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_platform.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_seed_material.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_gen_exception.2407.0.0.dylib,/usr/local/lib/libabsl_statusor.2407.0.0.dylib,/usr/local/lib/libabsl_status.2407.0.0.dylib,/usr/local/lib/libabsl_cord.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_info.2407.0.0.dylib,/usr/local/lib/libabsl_cord_internal.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_functions.2407.0.0.dylib,/usr/local/lib/libabsl_exponential_biased.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_handle.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cord_state.2407.0.0.dylib,/usr/local/lib/libabsl_crc32c.2407.0.0.dylib,/usr/local/lib/libabsl_crc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cpu_detect.2407.0.0.dylib,/usr/local/lib/libabsl_bad_optional_access.2407.0.0.dylib,/usr/local/lib/libabsl_strerror.2407.0.0.dylib,/usr/local/lib/libabsl_str_format_internal.2407.0.0.dylib,/usr/local/lib/libabsl_synchronization.2407.0.0.dylib,/usr/local/lib/libabsl_stacktrace.2407.0.0.dylib,/usr/local/lib/libabsl_symbolize.2407.0.0.dylib,/usr/local/lib/libabsl_debugging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_rust.2407.0.0.dylib,/usr/local/lib/libabsl_decode_rust_punycode.2407.0.0.dylib,/usr/local/lib/libabsl_utf8_for_code_point.2407.0.0.dylib,/usr/local/lib/libabsl_graphcycles_internal.2407.0.0.dylib,/usr/local/lib/libabsl_kernel_timeout_internal.2407.0.0.dylib,/usr/local/lib/libabsl_malloc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_time.2407.0.0.dylib,/usr/local/lib/libabsl_civil_time.2407.0.0.dylib,/usr/local/lib/libabsl_time_zone.2407.0.0.dylib,"-Wl,-framework,CoreFoundation",/usr/local/lib/libabsl_bad_variant_access.2407.0.0.dylib,/usr/local/lib/libabsl_strings.2407.0.0.dylib,/usr/local/lib/libabsl_int128.2407.0.0.dylib,/usr/local/lib/libabsl_strings_internal.2407.0.0.dylib,/usr/local/lib/libabsl_string_view.2407.0.0.dylib,/usr/local/lib/libabsl_base.2407.0.0.dylib,/usr/local/lib/libabsl_spinlock_wait.2407.0.0.dylib,/usr/local/lib/libabsl_throw_delegate.2407.0.0.dylib,/usr/local/lib/libabsl_raw_logging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_severity.2407.0.0.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = server;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/developmarin/Desktop/develop/projects/serverGPS/build/build/server.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A92DAE54A2CD47ADB27DA088 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/developmarin/Desktop/develop/projects/serverGPS/build/build;
+			};
+			name = MinSizeRel;
+		};
+		ACDE48B5893D47C49D03A4ED /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BFC94158D50A4AB1A0595213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/developmarin/Desktop/develop/projects/serverGPS/build/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",PROTOBUF_USE_DLLS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers\"",/Users/developmarin/Desktop/libraries/boost,"/Users/developmarin/Desktop/libraries/ConnectorC++/include/jdbc","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/developmarin/Desktop/libraries/ConnectorC++/lib64 /usr/local/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/developmarin/Desktop/libraries/ConnectorC++/lib64/libmysqlcppconn.10.9.2.0.dylib",/usr/local/lib/libprotobuf.29.3.0.dylib,/usr/local/lib/libabsl_log_internal_check_op.2407.0.0.dylib,/usr/local/lib/libabsl_leak_check.2407.0.0.dylib,/usr/local/lib/libabsl_die_if_null.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_conditions.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_message.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_nullguard.2407.0.0.dylib,/usr/local/lib/libabsl_examine_stack.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_format.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_proto.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_log_sink_set.2407.0.0.dylib,/usr/local/lib/libabsl_log_sink.2407.0.0.dylib,/usr/local/lib/libabsl_log_entry.2407.0.0.dylib,/usr/local/lib/libabsl_flags_internal.2407.0.0.dylib,/usr/local/lib/libabsl_flags_marshalling.2407.0.0.dylib,/usr/local/lib/libabsl_flags_reflection.2407.0.0.dylib,/usr/local/lib/libabsl_flags_config.2407.0.0.dylib,/usr/local/lib/libabsl_flags_program_name.2407.0.0.dylib,/usr/local/lib/libabsl_flags_private_handle_accessor.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_initialize.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_globals.2407.0.0.dylib,/usr/local/lib/libabsl_log_globals.2407.0.0.dylib,/usr/local/lib/libabsl_vlog_config_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_fnmatch.2407.0.0.dylib,/usr/local/lib/libabsl_raw_hash_set.2407.0.0.dylib,/usr/local/lib/libabsl_hash.2407.0.0.dylib,/usr/local/lib/libabsl_city.2407.0.0.dylib,/usr/local/lib/libabsl_low_level_hash.2407.0.0.dylib,/usr/local/lib/libabsl_hashtablez_sampler.2407.0.0.dylib,/usr/local/lib/libabsl_random_distributions.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_sequences.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_pool_urbg.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes_impl.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_slow.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_platform.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_seed_material.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_gen_exception.2407.0.0.dylib,/usr/local/lib/libabsl_statusor.2407.0.0.dylib,/usr/local/lib/libabsl_status.2407.0.0.dylib,/usr/local/lib/libabsl_cord.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_info.2407.0.0.dylib,/usr/local/lib/libabsl_cord_internal.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_functions.2407.0.0.dylib,/usr/local/lib/libabsl_exponential_biased.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_handle.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cord_state.2407.0.0.dylib,/usr/local/lib/libabsl_crc32c.2407.0.0.dylib,/usr/local/lib/libabsl_crc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cpu_detect.2407.0.0.dylib,/usr/local/lib/libabsl_bad_optional_access.2407.0.0.dylib,/usr/local/lib/libabsl_strerror.2407.0.0.dylib,/usr/local/lib/libabsl_str_format_internal.2407.0.0.dylib,/usr/local/lib/libabsl_synchronization.2407.0.0.dylib,/usr/local/lib/libabsl_stacktrace.2407.0.0.dylib,/usr/local/lib/libabsl_symbolize.2407.0.0.dylib,/usr/local/lib/libabsl_debugging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_rust.2407.0.0.dylib,/usr/local/lib/libabsl_decode_rust_punycode.2407.0.0.dylib,/usr/local/lib/libabsl_utf8_for_code_point.2407.0.0.dylib,/usr/local/lib/libabsl_graphcycles_internal.2407.0.0.dylib,/usr/local/lib/libabsl_kernel_timeout_internal.2407.0.0.dylib,/usr/local/lib/libabsl_malloc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_time.2407.0.0.dylib,/usr/local/lib/libabsl_civil_time.2407.0.0.dylib,/usr/local/lib/libabsl_time_zone.2407.0.0.dylib,"-Wl,-framework,CoreFoundation",/usr/local/lib/libabsl_bad_variant_access.2407.0.0.dylib,/usr/local/lib/libabsl_strings.2407.0.0.dylib,/usr/local/lib/libabsl_int128.2407.0.0.dylib,/usr/local/lib/libabsl_strings_internal.2407.0.0.dylib,/usr/local/lib/libabsl_string_view.2407.0.0.dylib,/usr/local/lib/libabsl_base.2407.0.0.dylib,/usr/local/lib/libabsl_spinlock_wait.2407.0.0.dylib,/usr/local/lib/libabsl_throw_delegate.2407.0.0.dylib,/usr/local/lib/libabsl_raw_logging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_severity.2407.0.0.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = server;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/developmarin/Desktop/develop/projects/serverGPS/build/build/server.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D12A49F92CC74D37B99AD3CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/developmarin/Desktop/develop/projects/serverGPS/build/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",PROTOBUF_USE_DLLS,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/developmarin/Desktop/develop/projects/serverGPS/Header Servers\"",/Users/developmarin/Desktop/libraries/boost,"/Users/developmarin/Desktop/libraries/ConnectorC++/include/jdbc","$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = ("/Users/developmarin/Desktop/libraries/ConnectorC++/lib64 /usr/local/lib","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/developmarin/Desktop/libraries/ConnectorC++/lib64/libmysqlcppconn.10.9.2.0.dylib",/usr/local/lib/libprotobuf.29.3.0.dylib,/usr/local/lib/libabsl_log_internal_check_op.2407.0.0.dylib,/usr/local/lib/libabsl_leak_check.2407.0.0.dylib,/usr/local/lib/libabsl_die_if_null.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_conditions.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_message.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_nullguard.2407.0.0.dylib,/usr/local/lib/libabsl_examine_stack.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_format.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_proto.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_log_sink_set.2407.0.0.dylib,/usr/local/lib/libabsl_log_sink.2407.0.0.dylib,/usr/local/lib/libabsl_log_entry.2407.0.0.dylib,/usr/local/lib/libabsl_flags_internal.2407.0.0.dylib,/usr/local/lib/libabsl_flags_marshalling.2407.0.0.dylib,/usr/local/lib/libabsl_flags_reflection.2407.0.0.dylib,/usr/local/lib/libabsl_flags_config.2407.0.0.dylib,/usr/local/lib/libabsl_flags_program_name.2407.0.0.dylib,/usr/local/lib/libabsl_flags_private_handle_accessor.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag.2407.0.0.dylib,/usr/local/lib/libabsl_flags_commandlineflag_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_initialize.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_globals.2407.0.0.dylib,/usr/local/lib/libabsl_log_globals.2407.0.0.dylib,/usr/local/lib/libabsl_vlog_config_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_internal_fnmatch.2407.0.0.dylib,/usr/local/lib/libabsl_raw_hash_set.2407.0.0.dylib,/usr/local/lib/libabsl_hash.2407.0.0.dylib,/usr/local/lib/libabsl_city.2407.0.0.dylib,/usr/local/lib/libabsl_low_level_hash.2407.0.0.dylib,/usr/local/lib/libabsl_hashtablez_sampler.2407.0.0.dylib,/usr/local/lib/libabsl_random_distributions.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_sequences.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_pool_urbg.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_hwaes_impl.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_randen_slow.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_platform.2407.0.0.dylib,/usr/local/lib/libabsl_random_internal_seed_material.2407.0.0.dylib,/usr/local/lib/libabsl_random_seed_gen_exception.2407.0.0.dylib,/usr/local/lib/libabsl_statusor.2407.0.0.dylib,/usr/local/lib/libabsl_status.2407.0.0.dylib,/usr/local/lib/libabsl_cord.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_info.2407.0.0.dylib,/usr/local/lib/libabsl_cord_internal.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_functions.2407.0.0.dylib,/usr/local/lib/libabsl_exponential_biased.2407.0.0.dylib,/usr/local/lib/libabsl_cordz_handle.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cord_state.2407.0.0.dylib,/usr/local/lib/libabsl_crc32c.2407.0.0.dylib,/usr/local/lib/libabsl_crc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_crc_cpu_detect.2407.0.0.dylib,/usr/local/lib/libabsl_bad_optional_access.2407.0.0.dylib,/usr/local/lib/libabsl_strerror.2407.0.0.dylib,/usr/local/lib/libabsl_str_format_internal.2407.0.0.dylib,/usr/local/lib/libabsl_synchronization.2407.0.0.dylib,/usr/local/lib/libabsl_stacktrace.2407.0.0.dylib,/usr/local/lib/libabsl_symbolize.2407.0.0.dylib,/usr/local/lib/libabsl_debugging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_internal.2407.0.0.dylib,/usr/local/lib/libabsl_demangle_rust.2407.0.0.dylib,/usr/local/lib/libabsl_decode_rust_punycode.2407.0.0.dylib,/usr/local/lib/libabsl_utf8_for_code_point.2407.0.0.dylib,/usr/local/lib/libabsl_graphcycles_internal.2407.0.0.dylib,/usr/local/lib/libabsl_kernel_timeout_internal.2407.0.0.dylib,/usr/local/lib/libabsl_malloc_internal.2407.0.0.dylib,/usr/local/lib/libabsl_time.2407.0.0.dylib,/usr/local/lib/libabsl_civil_time.2407.0.0.dylib,/usr/local/lib/libabsl_time_zone.2407.0.0.dylib,"-Wl,-framework,CoreFoundation",/usr/local/lib/libabsl_bad_variant_access.2407.0.0.dylib,/usr/local/lib/libabsl_strings.2407.0.0.dylib,/usr/local/lib/libabsl_int128.2407.0.0.dylib,/usr/local/lib/libabsl_strings_internal.2407.0.0.dylib,/usr/local/lib/libabsl_string_view.2407.0.0.dylib,/usr/local/lib/libabsl_base.2407.0.0.dylib,/usr/local/lib/libabsl_spinlock_wait.2407.0.0.dylib,/usr/local/lib/libabsl_throw_delegate.2407.0.0.dylib,/usr/local/lib/libabsl_raw_logging_internal.2407.0.0.dylib,/usr/local/lib/libabsl_log_severity.2407.0.0.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = server;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,"$(inherited)");
+				TARGET_TEMP_DIR = "/Users/developmarin/Desktop/develop/projects/serverGPS/build/build/server.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		DD3162F5027642B49EDA3368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
+				SYMROOT = /Users/developmarin/Desktop/develop/projects/serverGPS/build/build;
+			};
+			name = Debug;
+		};
+		F0CD016B421C4288AF59C4ED /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F8D2748D7CD7447D8B23D1DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44444621AABB41BC8CBFB9B8 /* Build configuration list for PBXProject "serverGPSn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3162F5027642B49EDA3368 /* Debug */,
+				3FE2F4D6E7DF443FBF9AD9D4 /* Release */,
+				A92DAE54A2CD47ADB27DA088 /* MinSizeRel */,
+				35C2D17CD3464F0582B28ADC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		88701079488E4C578929364D /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46FBE0D31AA45B083565D54 /* Debug */,
+				53C2E84EF7624F2E9C3074E8 /* Release */,
+				672394528C1047A7BC5A99CF /* MinSizeRel */,
+				6AF080B56C3047EEB537514D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A89157F1697947609AA6BB7B /* Build configuration list for PBXNativeTarget "server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC94158D50A4AB1A0595213 /* Debug */,
+				D12A49F92CC74D37B99AD3CD /* Release */,
+				A6F53D45F0694A5A83219444 /* MinSizeRel */,
+				7AA4178DE4F647F78C3ECD3E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E2A3E6A3BB054B4A96B0544F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4765D9AEE3461691889B4A /* Debug */,
+				F8D2748D7CD7447D8B23D1DF /* Release */,
+				F0CD016B421C4288AF59C4ED /* MinSizeRel */,
+				ACDE48B5893D47C49D03A4ED /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6005CBBDE52645AE9E7C249A /* Project object */;
+}

@@ -1,0 +1,3 @@
+/Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeFiles/server.dir
+/Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeFiles/ALL_BUILD.dir
+/Users/developmarin/Desktop/develop/projects/serverGPS/build/CMakeFiles/ZERO_CHECK.dir

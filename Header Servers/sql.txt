@@ -1,0 +1,16 @@
+CREATE TABLE users (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNIQUE NOT NULL,
+    name VARCHAR(32) UNIQUE NOT NULL,
+    pass VARCHAR(32) NOT NULL,
+    tracker_counts INT DEFAULT 0  -- По умолчанию 0, если не указано
+);
+CREATE TABLE gpses (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    gps_id INT UNIQUE NOT NULL,
+    owner_id INT NOT NULL,
+    longitude DOUBLE DEFAULT 0.0,
+    latitude DOUBLE DEFAULT 0.0,
+    time_sended TIME DEFAULT "00:00:00"
+);
+

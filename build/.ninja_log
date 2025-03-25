@@ -1,0 +1,15 @@
+# ninja log v6
+14	9480	1742731581852099651	CMakeFiles/server.dir/Source_Servers/globals.cpp.o	da75a0bee79f0f37
+14	9586	1742731581852306037	CMakeFiles/server.dir/Source_Servers/mysql.cpp.o	9916e3f13b198438
+48	8695	1742732000004736179	CMakeFiles/server.dir/Source_Servers/tracker.pb.cpp.o	719db2b08130d483
+14	10513	1742731581852505397	CMakeFiles/server.dir/Source_Servers/server.cpp.o	cd6cd34699ac81cb
+10513	10995	1742731592351325925	server	7ee035996b9133a8
+18	9509	1742731581856167011	CMakeFiles/server.dir/main.cpp.o	99f1c82ecbb6d4c8
+46	11026	1742732000003559126	CMakeFiles/server.dir/Source_Servers/client.cpp.o	1aed088d8f832b33
+23	7097	1742732134815123983	CMakeFiles/server.dir/Source_Servers/tracker.pb.cpp.o	3c21d9b16f45f83a
+20	10109	1742732134812611294	CMakeFiles/server.dir/Source_Servers/globals.cpp.o	da75a0bee79f0f37
+27	10182	1742732134819219705	CMakeFiles/server.dir/main.cpp.o	99f1c82ecbb6d4c8
+21	10207	1742732134813178497	CMakeFiles/server.dir/Source_Servers/mysql.cpp.o	9916e3f13b198438
+19	10416	1742732134811703833	CMakeFiles/server.dir/Source_Servers/client.cpp.o	233535353d977401
+22	11251	1742732134814645213	CMakeFiles/server.dir/Source_Servers/server.cpp.o	cd6cd34699ac81cb
+11251	11994	1742732146043172175	server	7ee035996b9133a8
