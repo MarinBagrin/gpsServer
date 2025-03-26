@@ -70,10 +70,18 @@ void Server::checkAndSetAuthClientsFromUnAuth() {
                     if (ptrClient->getNamePass() == namePass[0]+' '+namePass[1]) {
                         serv.authClients.push_back(ptrClient);
                         serv.unAuthClients.erase(find(serv.unAuthClients.begin(),serv.unAuthClients.end(),ptrClient));
-                        char* messageAllowAuth = new char[10]{"AllowAuth"};
-                        async_write(*(ptrClient->rozetka), buffer(messageAllowAuth,strlen(messageAllowAuth)),[&messageAllowAuth](const boost::system::error_code& ec, size_t bytes_transferred){
+                        char* messageAllowAuth = new char[16]{"AllowAuth/"};
+                        strcat(messageAllowAuth, to_string(ptrClient->ID).c_str());
+                        cout << "strcat: " << messageAllowAuth << endl;
+                        async_write(*(ptrClient->rozetka), buffer(messageAllowAuth,strlen(messageAllowAuth)),[](const boost::system::error_code& ec, size_t bytes_transferred){
                             cout << "AllowAuth было отправлен" << endl;
                             /*delete[] messageAllowAuth;*/});
+                    }
+                    else {
+                        char* messageUnAllowAuth = new char[16]{"UnAllowAuth"};
+                        async_write(*(ptrClient->rozetka), buffer(messageUnAllowAuth,strlen(messageUnAllowAuth)),[](const boost::system::error_code& ec, size_t bytes_transferred){
+                            cout << "UnAllowAuth было отправлено" << endl;
+                        });
                     }
                 }
             });
