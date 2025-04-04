@@ -35,7 +35,11 @@ public:
 void updateClients();
 void sendDataToClients();
 void checkConnection(boost::system::error_code ec);
-void updateNewDataToClients(const boost::system::error_code& ec);
+void updateNewDataToClient(Client* ptrClient);
+void updateNewDataToClients();
+void timerUpdateNewDataToClients(const boost::system::error_code& ec);
 void closeSocket(Client* ptrClient);
+void updateNewDataToClient(Client* ptrClient);
+
 
 #endif

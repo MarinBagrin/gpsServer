@@ -45,7 +45,9 @@ void Server::checkAndSetAuthClientsFromUnAuth() {
                         std::cerr << "Read operation was aborted." << std::endl;
                     } else {
                         // Обработка других типов ошибок
+                        cout << "123\n";
                         std::cerr << "Error during read: " << ec.message() << std::endl;
+                        cout << "321\n";
                     }
                     closeSocket(ptrClient);
                 }
@@ -76,6 +78,7 @@ void Server::checkAndSetAuthClientsFromUnAuth() {
                         async_write(*(ptrClient->rozetka), buffer(messageAllowAuth,strlen(messageAllowAuth)),[](const boost::system::error_code& ec, size_t bytes_transferred){
                             cout << "AllowAuth было отправлен" << endl;
                             /*delete[] messageAllowAuth;*/});
+                        updateNewDataToClient(ptrClient);
                     }
                     else {
                         char* messageUnAllowAuth = new char[16]{"UnAllowAuth"};
@@ -91,7 +94,7 @@ void Server::checkAndSetAuthClientsFromUnAuth() {
 
 void Server::startUpdateDataToAuthClients() {
     timer.expires_after(std::chrono::seconds(5));
-    timer.async_wait(&updateNewDataToClients);
+    timer.async_wait(&timerUpdateNewDataToClients);
 }
 
 void checkConnection(boost::system::error_code ec) {
@@ -106,7 +109,44 @@ void checkConnection(boost::system::error_code ec) {
     
 }
 
-void updateNewDataToClients(const boost::system::error_code& ec) {
+void updateNewDataToClients() {
+    
+    for (int i = 0; i < serv.authClients.size(); ++i) {
+        Client* ptrClient = serv.authClients[i];
+        if (!(ptrClient->isWriting)) {
+            serv.sqlServ.updateDataClient(ptrClient);
+            async_write(*(ptrClient->rozetka),buffer(ptrClient->serializedTrackers),[ptrClient](const boost::system::error_code& ec, size_t bytes_transferred) {
+                if (ec) {
+                    cout << ec.message();
+                    closeSocket(ptrClient);
+                }
+                else {
+                    ptrClient->isWriting = false;
+                    cout << "TheData was sended to: " + ptrClient->getNamePass() << endl;
+                }
+            });
+        }
+    }
+}
+void updateNewDataToClient(Client* ptrClient) {
+    
+    if (!(ptrClient->isWriting)) {
+        serv.sqlServ.updateDataClient(ptrClient);
+        async_write(*(ptrClient->rozetka),buffer(ptrClient->serializedTrackers),[ptrClient](const boost::system::error_code& ec, size_t bytes_transferred) {
+            if (ec) {
+                cout << ec.message();
+                closeSocket(ptrClient);
+            }
+            else {
+                ptrClient->isWriting = false;
+                cout << " First TheData was sended to: " + ptrClient->getNamePass() << endl;
+            }
+        });
+    }
+}
+
+void timerUpdateNewDataToClients(const boost::system::error_code &ec) {
+    //что делать если таймер завершится???????
     if (ec){
         if (ec) {
             std::cout << "Ошибка отмены: " << ec.message() << "\n";
@@ -115,30 +155,14 @@ void updateNewDataToClients(const boost::system::error_code& ec) {
             std::cout << "Таймер завершился.\n";
         }
     }
-    //что делать если таймер завершится???????
     else {
-        for (int i = 0; i < serv.authClients.size(); ++i) {
-            Client* ptrClient = serv.authClients[i];
-            if (!(ptrClient->isWriting)) {
-                serv.sqlServ.updateDataClient(ptrClient);
-                async_write(*(ptrClient->rozetka),buffer(ptrClient->serializedTrackers),[ptrClient](const boost::system::error_code& ec, size_t bytes_transferred) {
-                    if (ec) {
-                        cout << ec.message();
-                        closeSocket(ptrClient);
-                    }
-                    else {
-                        ptrClient->isWriting = false;
-                        cout << "TheData was sended to: " + ptrClient->getNamePass() << endl;
-                    }
-                    
-                });
-            }
-        }
+        updateNewDataToClients();
         serv.startUpdateDataToAuthClients();
     }
 }
 
 void closeSocket(Client* ptrClient) {
+    if (ptrClient->rozetka == nullptr) { return; }
     ptrClient->rozetka->close();
         auto it = find(serv.unAuthClients.begin(),serv.unAuthClients.end(),ptrClient);
         if (serv.unAuthClients.end() != it) {
@@ -172,7 +196,9 @@ void Server::leaseanAndExecuteRequetsAuthClients() {
                         // Обработка других типов ошибок
                         std::cerr << "Error during read: " << ec.message() << std::endl;
                     }
+                    cout << "12345\n";
                     closeSocket(ptrClient);
+                    cout << "32141\n";
                 }
                 else {
                     char* reqBuf = ptrClient->requestbuffer;

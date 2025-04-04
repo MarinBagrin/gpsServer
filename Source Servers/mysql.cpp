@@ -48,21 +48,13 @@ void Sql::getNamePassClient(Client *ptrClient, string *ptrString) {
         while(res->next()) {
             string id = res->getString("unit_id");
             
-            string resultHex = intToHex(stoi(string(1,id[0]) + id[1] + id[2])) + intToHex(stoi(string(1,id[3]) + id[4] + id[5]));//
-            for (int i = 0; i < resultHex.size(); ++i) {
-                if (resultHex[i] >= 97 && resultHex[i] <= 122) {
-                    resultHex[i] -= 32;
-                }
-            }
-            
+
             ResultSet* res_obj_data = stmt_newgps->executeQuery("SELECT denumirea FROM objects_data WHERE id_dispozitiv =\"" + id + "\"");
             res_obj_data->next();
-
             //res->next();
             tracker* ptrTracker = ptrClient->list_t.add_trackers();
             ptrTracker->set_name(res_obj_data->getString("denumirea"));
-            ptrTracker->set_id(resultHex);
-            
+            ptrTracker->set_id(id);
 //            cout << id << " id\n";
 //            cout << resultHex << " hex\n";
 //            cout << ptrTracker->name() << " hex\n";
@@ -74,18 +66,32 @@ void Sql::getNamePassClient(Client *ptrClient, string *ptrString) {
 void Sql::updateDataClient(Client *ptrClient) {
     unsigned int high_nibble = 240;
     unsigned int low_nibble = 15;
-    cout <<"count =" << ptrClient->list_t.trackers_size() << endl;
+    cout <<"count trackers of " << ptrClient->name <<" = " << ptrClient->list_t.trackers_size() << endl;
     
     for (int i = 0; i < ptrClient->list_t.trackers_size(); ++i) {
         tracker* ptrTracker = ptrClient->list_t.mutable_trackers(i);
-        ResultSet* res = stmt_longdb->executeQuery("SELECT data FROM raw_data  WHERE device_id =\"" + ptrTracker->id() + "\" ORDER BY id DESC");
+        string id = ptrTracker->id();
+        string idHex = intToHex(stoi(string(1,id[0]) + id[1] + id[2])) + intToHex(stoi(string(1,id[3]) + id[4] + id[5]));//
+        for (int i = 0; i < idHex.size(); ++i) {
+            if (idHex[i] >= 97 && idHex[i] <= 122) {
+                idHex[i] -= 32;
+            }
+        }
+        ResultSet* res = stmt_longdb->executeQuery("SELECT data FROM raw_data  WHERE device_id =\"" + idHex + "\" ORDER BY id DESC");
+
         if (res->next()) {
+            cout << "ID HEX tracker: " << idHex <<endl;
 //            cout << "trackers =" << " " << ptrClient->list_t.trackers_size() << endl;
 //            cout << "i =" << i << endl;
 //            cout << ptrTracker->id() << endl;
-            string raw_data = res->getString("data");
-            char* pointer = raw_data.data();
-            ptrTracker->set_battery(100 / (15 / (low_nibble & pointer[1])));
+            string data = res->getString("data");
+            char* pointer = data.data();
+            if ((low_nibble & pointer[1]) != 0) {
+                ptrTracker->set_battery(100 / (15 / (low_nibble & pointer[1])));
+            }
+            else {
+                ptrTracker->set_battery(0);
+            }
             //cout << "battery " << ptrTracker->battery() << endl;
             ptrTracker->set_speed(pointer[13] * 1.852);
             string coordinates;
@@ -96,19 +102,60 @@ void Sql::updateDataClient(Client *ptrClient) {
                 coordinates += static_cast<char>(((pointer[i] & high_nibble) >> 4) + 48);
                 coordinates += static_cast<char>((pointer[i] & low_nibble) + 48);
             }
+            bool flagSuccesfulParcing = true;
             for(int i = 0; i < 7; ++i) {
                 if(i == 2 || i == 4){
                     latitude += '.';
                     longitude += '.';
                 }
-                latitude += coordinates[i];
-                longitude += coordinates[i+9];
+                if ((coordinates[i] >= 48 && coordinates[i] <= 57) && (coordinates[i+9] >= 48 && coordinates[i] <= 57)) {
+                    latitude += coordinates[i];
+                    longitude += coordinates[i+9];
+                }
+                else {
+                    cout << "неудачный парсинг\n";
+                    flagSuccesfulParcing = false;
+                    break;
+                    
+                }
+                
             }
-//            cout << "latitude: " <<to_string(stof(latitude.substr(0, 2)) + stof(latitude.substr(3, latitude.size())) / 60) << endl;
-//            cout << "longitude: " << to_string(stof(longitude.substr(0, 2)) + stof(longitude.substr(3, latitude.size())) / 60) << endl;
-            ptrTracker->set_latitude(to_string(stof(latitude.substr(0, 2)) + stof(latitude.substr(3, latitude.size())) / 60));
-            ptrTracker->set_longitude(to_string(stof(longitude.substr(0, 2)) + stof(longitude.substr(3, latitude.size()))/60 ));
+            
+            cout << "longitude << " << longitude << endl;
+            cout << "latitude << " << latitude << endl;
+            if(flagSuccesfulParcing) {
+                //            cout << "latitude: " <<to_string(stof(latitude.substr(0, 2)) + stof(latitude.substr(3, latitude.size())) / 60) << endl;
+                //            cout << "longitude: " << to_string(stof(longitude.substr(0, 2)) + stof(longitude.substr(3, latitude.size())) / 60) << endl;
+                ptrTracker->set_latitude(to_string(stof(latitude.substr(0, 2)) + stof(latitude.substr(3, latitude.size())) / 60));
+                ptrTracker->set_longitude(to_string(stof(longitude.substr(0, 2)) + stof(longitude.substr(3, longitude.size()))/60 ));
+            }
         }
+        res = stmt_newgps->executeQuery("SELECT data FROM objects_logs  WHERE did =\"" + id + "\" ORDER BY id DESC");
+        if (res->next()) {
+            cout << "ID DEC tracker: " << id <<endl;
+
+            string data = res->getString("data");
+            char* pointer = data.data();
+            ptrTracker->set_battery(100);
+            //cout << "battery " << ptrTracker->battery() << endl;
+            ptrTracker->set_speed(pointer[13] * 1.852);
+            string latitude;
+            string longitude;
+            for(int i = 18; i < 24; ++ i) {
+                if (i == 20 || i == 22)
+                {
+                    latitude += '.';
+                    longitude += '.';
+                }
+                latitude += pointer[i];
+                longitude += pointer[i+8];
+            }
+            cout << "longitude << " << longitude << endl;
+            cout << "latitude << " << latitude << endl;
+            ptrTracker->set_latitude(to_string(stof(latitude.substr(0, 2)) + stof(latitude.substr(3, latitude.size())) / 60));
+            ptrTracker->set_longitude(to_string(stof(longitude.substr(0, 2)) + stof(longitude.substr(3, longitude.size()))/60 ));
+        }
+
 //        else {
 //            time_t now = time(nullptr);
 //            tm* local_time = localtime(&now);
@@ -117,6 +164,7 @@ void Sql::updateDataClient(Client *ptrClient) {
 //            res = stmt_longdb->executeQuery("SELECT table_name FROM information_schema.tables WHERE table_schema = 'long_database' AND table_name LIKE '"+ date_str +"'");
 //            
 //        }
+        cout << "Data Sql Request id good\n";
     }
     
     ptrClient->list_t.SerializeToString(&ptrClient->serializedTrackers);
