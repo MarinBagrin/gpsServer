@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/server"
+			"path" : "RelWithDebInfo/server"
 		}
 	],
 	"backtrace" : 1,
@@ -355,7 +355,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-Os -DNDEBUG '-std=c++17'"
+					"fragment" : "-O2 -g -DNDEBUG '-std=c++20'"
 				}
 			],
 			"defines" : 
@@ -393,7 +393,7 @@
 					3,
 					3
 				],
-				"standard" : "17"
+				"standard" : "20"
 			},
 			"sourceIndexes" : 
 			[
@@ -418,7 +418,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Os -DNDEBUG",
+				"fragment" : "-O2 -g -DNDEBUG",
 				"role" : "flags"
 			},
 			{

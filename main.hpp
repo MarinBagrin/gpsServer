@@ -3,6 +3,6 @@
 
 void startServer();
 void startInterface(int argc, char *argv[]);
-
+void startServerRun();
 #endif
 

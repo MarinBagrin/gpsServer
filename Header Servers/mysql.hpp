@@ -24,6 +24,7 @@ public:
     Statement *stmt_longdb;
     Sql();
     
+    void getArchiveFor(Client* ptrClient,string begin, string end, string id);
     void getNamePassClient(Client *ptrClient, string* ptrStr);
     void updateDataClient(Client *ptrClient);
 };

@@ -6,6 +6,7 @@
 #include <map>
 #include <vector>
 #include <string>
+#include <cstdint> // или <stdint.h> в C
 //------------------------
 #include "client.hpp"
 #include "mysql.hpp"
@@ -27,14 +28,14 @@ public:
 //--------------------------------
     Server();
 //------------------------------------
-    void checkConnectedWithNewClient();
-    void checkAndSetAuthClientsFromUnAuth();
+    void startAcceptingClientsConnections();
+    void checkAndSetAuthClientsFromUnAuth(Client* checkClient);
     void startUpdateDataToAuthClients();
-    void leaseanAndExecuteRequetsAuthClients();
+    void leaseanAndExecuteRequetsAuthClients(Client* ptrClient);
 };
+void sendLenghtMessage(int32_t lenght, Client* ptrClient);
 void updateClients();
 void sendDataToClients();
-void checkConnection(boost::system::error_code ec);
 void updateNewDataToClient(Client* ptrClient);
 void updateNewDataToClients();
 void timerUpdateNewDataToClients(const boost::system::error_code& ec);

@@ -16,10 +16,12 @@ public:
     string password;
     string organisation;
     tracker_list list_t;
+    tracker_list list_archive_t;
     int dataBuffer[20];
     char authBuffer[32];
     char requestbuffer[64];
     string serializedTrackers;
+    string serializedTrackersArchive;
     ip::tcp::socket* rozetka;
     bool isLeasing;
     bool isWriting;
