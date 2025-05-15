@@ -106,10 +106,10 @@ void Server::checkAndSetAuthClientsFromUnAuth(Client* checkClient) {
 
 
 void sendLenghtMessage(int32_t lenght,Client* ptrClient) {
-    cout << endl << lenght <<"wtf\n";
     int32_t lenghtMessage = htonl(lenght);
     async_write(*(ptrClient->rozetka), buffer(reinterpret_cast<char*>(&lenghtMessage),sizeof(int32_t)),[lenght](const boost::system::error_code& ec, size_t bytes_transferred){
-        cout << "4-byte int32-t send with value: " << lenght << endl;
+//        cout << "4-byte int32-t send with value: " << lenght << endl;
+        //cout << "Lenght in 4 byte was sended: " << lenght << endl;
     });
 }
 
@@ -195,7 +195,7 @@ void closeSocket(Client* ptrClient) {
 
 void Server::leaseanAndExecuteRequetsAuthClients(Client* ptrClient) {
     
-    cout << "Start Leasen " << ptrClient->getNamePass();
+    cout << "Start Leasen " << ptrClient->getNamePass() << endl;
     ptrClient->rozetka->async_read_some(buffer(ptrClient->requestbuffer),[ptrClient,this](const boost::system::error_code& ec, size_t bytes_transferred){
         
         if (ec) {
@@ -225,7 +225,7 @@ void Server::leaseanAndExecuteRequetsAuthClients(Client* ptrClient) {
             }
             else if (reqStrBuf.find("ravch") != std::string::npos) {
                 ptrClient->serializedTrackersArchive.clear();
-
+                
                 string name;
                 string begin;
                 string end;
@@ -252,23 +252,43 @@ void Server::leaseanAndExecuteRequetsAuthClients(Client* ptrClient) {
                     }
                 }
                 cout << "server: \nid: "<< id << endl;
-                sqlServ.getArchiveFor(ptrClient, begin, end, id);
-                ptrClient->serializedTrackersArchive = string("Archive../") + ptrClient->serializedTrackersArchive ;
-                cout <<"данные архива \n" << ptrClient->serializedTrackersArchive << endl << "count symbols: " << ptrClient->serializedTrackersArchive.size();
                 
-                sendLenghtMessage(ptrClient->serializedTrackersArchive.size(), ptrClient);
-                async_write(*(ptrClient->rozetka), buffer(ptrClient->serializedTrackersArchive),[ptrClient](const boost::system::error_code& ec, size_t bytes_transferred){
-                    if (ec) {
-                        cout << ec.message();
-                        cout << "Err: not sended archive data to Client: " << ptrClient->getNamePass() << endl;
-                        closeSocket(ptrClient);
+                sqlServ.getArchiveFor(ptrClient, begin, end, id);
+                tracker_list archiveBuffer;
+                ptrClient->lists_str_archive.clear();
+                for(int i = 0; i < ptrClient->list_archive_t.trackers_size(); ++i) {
+                    cout << "cycle - " << i << endl;
+//                    ptrClient->list_archive_t.mutable_trackers(i)->set_name("1");
+//                    ptrClient->list_archive_t.mutable_trackers(i)->set_coordinates("1");
+//                    ptrClient->list_archive_t.mutable_trackers(i)->set_id("1");
+//                    ptrClient->list_archive_t.mutable_trackers(i)->set_time_track("2024:02:1 03:23");
+//                    ptrClient->list_archive_t.mutable_trackers(i)->set_longitude("47");
+//                    ptrClient->list_archive_t.mutable_trackers(i)->set_latitude("47");
+                    if (i % 1000 == 0 && i != 0) {
+                        string serializedPacketArchive;
+                        archiveBuffer.SerializeToString(&serializedPacketArchive);
+                        serializedPacketArchive = string("Archive../") + serializedPacketArchive;
+                        ptrClient->lists_str_archive.push_back(serializedPacketArchive);
+                        archiveBuffer.Clear();
                     }
                     else {
-                        ptrClient->isWriting = false;
-                        cout << "The Archive was sended to: " + ptrClient->getNamePass() << endl;
+                        tracker* ptrTracker = archiveBuffer.add_trackers();
+                        *ptrTracker = *(new tracker(*ptrClient->list_archive_t.mutable_trackers(i)));
                     }
-                });
+                }
+                cout << "archiveBuffer.count: " << archiveBuffer.trackers_size() << endl;
+                if (archiveBuffer.trackers_size() != 0) {
+                    string serializedPacketArchive;
+                    archiveBuffer.SerializeToString(&serializedPacketArchive);
+                    serializedPacketArchive = string("Archive00/") + serializedPacketArchive;
+                    ptrClient->lists_str_archive.push_back(serializedPacketArchive);
+                    archiveBuffer.Clear();
+                }
+                
+                
+                sendPartAchive(ptrClient,0);
             }
+            cout << "типа все\n";
             this->leaseanAndExecuteRequetsAuthClients(ptrClient);
         }
         //другие запросы
@@ -276,3 +296,35 @@ void Server::leaseanAndExecuteRequetsAuthClients(Client* ptrClient) {
     
 }
 
+void sendPartAchive(Client* ptrClient, int index) {
+    if (index >= ptrClient->lists_str_archive.size()){
+        return;
+    }
+    string count = to_string(static_cast<int>(ptrClient->lists_str_archive.size()));
+    if (count.size() == 2) {
+        ptrClient->lists_str_archive[index][7] = count[0];
+        ptrClient->lists_str_archive[index][8] = count[1];
+    }
+    else {
+        ptrClient->lists_str_archive[index][7] = '0';
+        ptrClient->lists_str_archive[index][8] = count[0];
+    }
+    ptrClient->lists_str_archive[index][9] = *(to_string(index).c_str());
+
+    sendLenghtMessage(ptrClient->lists_str_archive[index].size(), ptrClient);
+    async_write(*(ptrClient->rozetka), buffer(ptrClient->lists_str_archive[index]),[ptrClient,index](const boost::system::error_code& ec, size_t bytes_transferred){
+        if (ec) {
+            cout << ec.message();
+            cout << "Err: not sended archive data to Client: " << ptrClient->getNamePass() << endl;
+            closeSocket(ptrClient);
+        }
+        else {
+            ptrClient->isWriting = false;
+            cout << "The Archive was sended to: " + ptrClient->getNamePass()  << "with index i: " << index << "and size: " << ptrClient->lists_str_archive[index].size()  << endl << "-" << endl;
+            //doing new send
+            if (index+1 != ptrClient->lists_str_archive.size()) {
+                sendPartAchive(ptrClient, index+1);
+            }
+        }
+    });
+}

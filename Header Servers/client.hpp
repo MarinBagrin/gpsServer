@@ -17,7 +17,9 @@ public:
     string organisation;
     tracker_list list_t;
     tracker_list list_archive_t;
+    vector<string> lists_str_archive;
     int dataBuffer[20];
+    
     char authBuffer[32];
     char requestbuffer[64];
     string serializedTrackers;

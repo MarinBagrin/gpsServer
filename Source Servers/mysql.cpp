@@ -77,7 +77,7 @@ void Sql::getArchiveFor(Client* ptrClient,string begin, string end, string id) {
     bool isHex = false;
     
     while (res->next()) {
-        cout << "raw_data |\n";
+        //cout << "raw_data |\n";
         tracker* archive_tracker = ptrClient->list_archive_t.add_trackers();
         *archive_tracker = *transformRawDataInTrackerData(res->getString("data"));
         string time_tracker = res->getString("device_date_time");
@@ -133,7 +133,7 @@ void Sql::getArchiveFor(Client* ptrClient,string begin, string end, string id) {
         res = stmt_newgps->executeQuery("SELECT data, datetime FROM objects_logs WHERE datetime > \'" + begin + "\' AND datetime < \'" + end + "\' AND did = \"" + id + "\"");
         
         while (res->next()) {
-            cout << "objects_logs |\n";
+            //cout << "objects_logs |\n";
             tracker* archive_tracker = ptrClient->list_archive_t.add_trackers();
             *archive_tracker = *transformOldRawDataInTrackerData(res->getString("data"));
             string time_tracker = res->getString("datetime");
@@ -185,7 +185,7 @@ void Sql::getArchiveFor(Client* ptrClient,string begin, string end, string id) {
             ymd_end = sys_days{ymd_end} - days{1};
         }
     }
-        ptrClient->list_archive_t.SerializeToString(&ptrClient->serializedTrackersArchive);
+        //ptrClient->list_archive_t.SerializeToString(&ptrClient->serializedTrackersArchive);
     
 }
 

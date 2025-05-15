@@ -41,6 +41,7 @@ void updateNewDataToClients();
 void timerUpdateNewDataToClients(const boost::system::error_code& ec);
 void closeSocket(Client* ptrClient);
 void updateNewDataToClient(Client* ptrClient);
+void sendPartAchive(Client* ptrClient, int index);
 
 
 #endif
