@@ -91,7 +91,7 @@ void Server::checkAndSetAuthClientsFromUnAuth(Client* checkClient) {
                 leaseanAndExecuteRequetsAuthClients(ptrClient);
             }
             else {
-                char* messageUnAllowAuth = new char[]{"UnAllowAuth"};
+                char* messageUnAllowAuth = new char[]{"NoAuth"};
                 sendLenghtMessage(strlen(messageUnAllowAuth),ptrClient);
                 async_write(*(ptrClient->rozetka), buffer(messageUnAllowAuth,strlen(messageUnAllowAuth)),[](const boost::system::error_code& ec, size_t bytes_transferred){
                     cout << "UnAllowAuth было отправлено" << endl;

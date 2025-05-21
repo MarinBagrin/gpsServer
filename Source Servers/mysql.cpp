@@ -201,7 +201,7 @@ void Sql::updateDataClient(Client *ptrClient) {
         string idHex = intToHex(stoi(string(1,id[0]) + id[1] + id[2])) + intToHex(stoi(string(1,id[3]) + id[4] + id[5]));//
         
         
-        ResultSet* res = stmt_longdb->executeQuery("SELECT data FROM raw_data WHERE device_id =\"" + idHex + "\" ORDER BY id DESC");
+        ResultSet* res = stmt_longdb->executeQuery("SELECT data, device_date_time FROM raw_data WHERE device_id =\"" + idHex + "\" ORDER BY id DESC");
 
         if (res->next()) {
             cout << "name for idHex " << ptrTracker->name() << endl;
@@ -210,15 +210,25 @@ void Sql::updateDataClient(Client *ptrClient) {
 //            cout << "i =" << i << endl;
 //            cout << ptrTracker->id() << endl;
             string data = res->getString("data");
+            string date = res->getString("device_date_time");
+            ptrTracker->set_time_track(date);
             char* pointer = data.data();
             if ((low_nibble & pointer[1]) != 0) {
-                ptrTracker->set_battery(100 / (15 / (low_nibble & pointer[1])));
+                ptrTracker->set_battery(100 / (static_cast<float>(15) / (low_nibble & pointer[1])));
             }
             else {
                 ptrTracker->set_battery(0);
             }
             //cout << "battery " << ptrTracker->battery() << endl;
             ptrTracker->set_speed(pointer[13] * 1.852);
+            cout << "1111";
+            int rfSignal = 100.0 / (static_cast<float>(32) / ( 63 & pointer[8]));
+            cout << "\n сигнал rfSignal: " << rfSignal << endl;
+            cout << "2222";
+
+            ptrTracker->set_coordinates(to_string(rfSignal));
+            cout << "3333";
+
             string coordinates;
             string latitude;
             string longitude;
@@ -246,8 +256,7 @@ void Sql::updateDataClient(Client *ptrClient) {
                 
             }
             
-//            cout << "longitude << " << longitude << endl;
-//            cout << "latitude << " << latitude << endl;
+            
             if(flagSuccesfulParcing) {
                 //            cout << "latitude: " <<to_string(stof(latitude.substr(0, 2)) + stof(latitude.substr(3, latitude.size())) / 60) << endl;
                 //            cout << "longitude: " << to_string(stof(longitude.substr(0, 2)) + stof(longitude.substr(3, latitude.size())) / 60) << endl;
@@ -262,7 +271,7 @@ void Sql::updateDataClient(Client *ptrClient) {
             char* pointer = data.data();
             ptrTracker->set_battery(100);
             //cout << "battery " << ptrTracker->battery() << endl;
-            ptrTracker->set_speed(pointer[13] * 1.852);
+            ptrTracker->set_speed(pointer[6] * 1.852);
             string latitude;
             string longitude;
             bool flagSuccesfulParcing = true;
@@ -272,8 +281,7 @@ void Sql::updateDataClient(Client *ptrClient) {
                     latitude += '.';
                     longitude += '.';
                 }
-                latitude += pointer[i];
-                longitude += pointer[i+8];
+
                 
                 if ((pointer[i] >= 48 && pointer[i] <= 57) && (pointer[i+8] >= 48 && pointer[i+8] <= 57)) {
                     latitude += pointer[i];
@@ -290,20 +298,11 @@ void Sql::updateDataClient(Client *ptrClient) {
             }
             
             
-            
             ptrTracker->set_latitude(to_string(stof(latitude.substr(0, 2)) + stof(latitude.substr(3, latitude.size())) / 60));
             ptrTracker->set_longitude(to_string(stof(longitude.substr(0, 2)) + stof(longitude.substr(3, longitude.size()))/60 ));
         }
 
-//        else {
-//            time_t now = time(nullptr);
-//            tm* local_time = localtime(&now);
-//            string date_str = "%" + to_string(local_time->tm_year - 100) + (local_time->tm_mon + 1 < 10 ? "0"+to_string(local_time->tm_mon + 1) : to_string(local_time->tm_mon + 1)) + "%";
-//            cout << date_str << "date";
-//            res = stmt_longdb->executeQuery("SELECT table_name FROM information_schema.tables WHERE table_schema = 'long_database' AND table_name LIKE '"+ date_str +"'");
-//            
-//        }
-//        cout << "Data Sql Request id good\n";
+
     }
     
     ptrClient->list_t.SerializeToString(&ptrClient->serializedTrackers);
